@@ -16,17 +16,27 @@ public class Tendable_Task {
 		driver.get("https://www.tendable.com/");
 		driver.manage().window().maximize();
 		
-		driver.findElement(By.xpath("//a[text()='Our Story']")).click();
-		String Page1=driver.getCurrentUrl();
-		System.out.println(Page1);
-		
-		driver.findElement(By.xpath("//a[text()='Our Solution']")).click();
-		String Page2=driver.getCurrentUrl();
-		System.out.println(Page2);
-		
-		driver.findElement(By.xpath("//a[text()='Why Tendable?']")).click();
-		String Page3 =driver.getCurrentUrl();
-		System.out.println(Page3);
+		WebElement ourstory = driver.findElement(By.xpath("//a[text()='Our Story']"));
+
+		if (ourstory.isEnabled()) {
+			System.out.println("our Story is Accessible");
+		} else {
+			System.out.println("our Story is not not accesible");
+		}
+
+		WebElement oursolution = driver.findElement(By.xpath("//a[text()='Our Solution']"));
+		if (oursolution.isEnabled()) {
+			System.out.println("our Solution is Accessible");
+		} else {
+			System.out.println("our Solution is not not accesible");
+		}
+
+		WebElement WhyTengable = driver.findElement(By.xpath("//a[text()='Why Tendable?']"));
+		if (WhyTengable.isEnabled()) {
+			System.out.println("Why Tengable is Accessible");
+		} else {
+			System.out.println("Why Tengable is not not accesible");
+		}
 		
 		
 		driver.findElement(By.xpath("//a[text()='Contact Us']")).click();

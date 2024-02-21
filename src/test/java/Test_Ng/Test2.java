@@ -15,7 +15,7 @@ public class Test2 {
 
 	@BeforeMethod
 	public void setUp() {
-
+//
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("https://www.facebook.com/");
